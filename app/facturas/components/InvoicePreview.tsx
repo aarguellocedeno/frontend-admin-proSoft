@@ -72,4 +72,30 @@ state.items.map((i) => (
 <td className="px-3 py-2">{i.quantity}</td>
 <td className="px-3 py-2">{currency(i.price)}</td>
 <td className="px-3 py-2 font-medium">{currency(i.quantity * i.price)}</td>
+</tr>
+))
+)}
+</tbody>
+</table>
+</div>
+
+{/* Totales imprimibles */}
+<div className="flex items-center justify-end gap-8 border-t p-4 text-sm">
+<div className="space-y-1">
+<div className="flex items-center justify-between gap-8">
+<span className="text-slate-600">Subtotal</span>
+<span className="font-medium">{currency(subtotal)}</span>
+</div>
+<div className="flex items-center justify-between gap-8">
+<span className="text-slate-600">IVA</span>
+<span className="font-medium">{currency(tax)}</span>
+</div>
+<div className="flex items-center justify-between gap-8 border-t pt-2 text-base">
+<span className="font-semibold">Total</span>
+<span className="font-semibold">{currency(total)}</span>
+</div>
+</div>
+</div>
+</div>
+);
 }
