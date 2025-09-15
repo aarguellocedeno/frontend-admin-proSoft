@@ -9,7 +9,6 @@ import {
   Package,
   BarChart3,
   ArrowRight,
-  Sparkles,
   TrendingUp
 } from "lucide-react";
 
