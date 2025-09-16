@@ -130,23 +130,6 @@ const InputWithIcon = memo(function InputWithIcon({
           </div>
         )}
 
-        {required && !hasValue && !hasError && (
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-orange-400" />
-          </div>
-        )}
-
-        {hasValue && !hasError && (
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
-            <CheckCircle size={16} className="text-green-500" />
-          </div>
-        )}
-
-        {hasError && (
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
-            <XCircle size={16} className="text-red-500" />
-          </div>
-        )}
       </div>
 
       {description && <p className="ml-1 text-xs text-gray-500">{description}</p>}
@@ -285,7 +268,6 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
                 onBlur={handleBlur}
                 min="0.01"
                 step="0.01"
-                prefix="$"
                 suffix="COP"
                 description="Precio unitario de venta"
               />
@@ -300,7 +282,7 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
                 isFocused={focusedField === "stock"}
                 onFocus={() => handleFocus("stock")}
                 onBlur={handleBlur}
-                min="0"
+                min=""
                 suffix="unidades"
                 description="Cantidad inicial en inventario"
               />
@@ -315,7 +297,7 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
                 isFocused={focusedField === "min_stock"}
                 onFocus={() => handleFocus("min_stock")}
                 onBlur={handleBlur}
-                min="0"
+                min=""
                 suffix="unidades"
                 description="Alerta cuando llegue a esta cantidad"
               />

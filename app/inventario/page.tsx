@@ -63,7 +63,7 @@ export default function InventarioPage() {
   }) => {
     try {
       await createProducto(form.product_id, form.name, form.price, form.stock, form.min_stock);
-      setMsg({ text: `Producto ${form.name} creado correctamente ✅`, ok: true });
+      setMsg({ text: `Producto ${form.name} creado correctamente `, ok: true });
       await cargarProductos(); // refresca la tabla después de crear
       return true;
     } catch (e: any) {
