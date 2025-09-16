@@ -5,9 +5,6 @@ import React, { memo, useState } from "react";
 import { BadgeCheck, User, UserCheck, Mail, Phone, MapPin, CreditCard } from "lucide-react";
 import { useInvoice } from "./InvoiceContext";
 
-/* =========================================================
-   InputWithIcon: fuera del componente + memo para evitar remount
-   ========================================================= */
 type IconType = React.ComponentType<{ size?: number; className?: string }>;
 
 type InputWithIconProps = {
