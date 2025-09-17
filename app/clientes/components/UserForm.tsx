@@ -240,7 +240,7 @@ export default function UserForm({
         {/* Header */}
         <div className="mb-8 flex items-center gap-4">
           <div>
-            <h2 className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-2xl font-bold text-transparent">
+            <h2 className="bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
               Crear Usuario
             </h2>
             <p className="text-sm text-gray-600">Completa la información del nuevo usuario</p>
@@ -471,9 +471,9 @@ export default function UserForm({
               onClick={handleCreate}
               disabled={submitting || !isFormValid}
               className={`
-                flex-1 transform rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-4
+                flex-1 transform rounded-2xl bg-gradient-to-r from-red-500 to-pink-600 px-6 py-4
                 font-semibold text-white shadow transition-all duration-300 hover:scale-[1.02]
-                hover:from-indigo-600 hover:to-purple-700 hover:shadow-xl
+                hover:from-pink-600 hover:to-purple-700 hover:shadow-xl
                 disabled:cursor-not-allowed disabled:bg-gray-400
               `}
             >
