@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInvoice } from "./InvoiceContext";
 import { Printer, Eraser, Hash } from "lucide-react";
-import { createFactura } from "../../lib/api.js";
+import { createFactura } from "../../lib/api";
 
 export default function ActionsBar() {
   const { dispatch, generateId, state } = useInvoice();

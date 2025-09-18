@@ -1,6 +1,12 @@
-import { getMe } from "./api.js";
+import { getMe } from "./api";
 
-export async function checkAuth(required = true) {
+type User = {
+  username: string;
+  roles?: string[];
+  role?: string;
+};
+
+export async function checkAuth(required: boolean = true): Promise<User | null> {
   const token = localStorage.getItem("token");
 
   if (!token && required) {
@@ -10,7 +16,7 @@ export async function checkAuth(required = true) {
 
   if (token) {
     try {
-      const user = await getMe();
+      const user: User = await getMe();
       localStorage.setItem("userName", user.username);
 
       // guarda el primer rol (o vacío si no existe)
@@ -23,7 +29,7 @@ export async function checkAuth(required = true) {
       }
 
       return user;
-    } catch (err) {
+    } catch (err: any) {
       console.warn("Token inválido:", err.message);
       localStorage.clear();
       if (required) window.location.href = "/";

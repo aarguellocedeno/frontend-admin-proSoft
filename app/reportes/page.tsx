@@ -349,10 +349,6 @@ export default function SalesDashboardPage() {
         <KpiCards summary={summary} />
 
       </section>
-
-      <footer className="mt-8 text-center text-xs text-slate-400">
-        Fuente: {apiSource}
-      </footer>
     </main>
   );
 }
