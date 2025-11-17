@@ -61,11 +61,17 @@ const ReservaPedidos = () => {
     const fecha = new Date(fechaHora);
     const hora = fecha.getHours();
     const minutos = fecha.getMinutes();
+    const diaSemana = fecha.getDay(); // 0 = Domingo, 6 = Sábado
     
     // Validar que sea fecha futura
     const ahora = new Date();
     if (fecha <= ahora) {
       return { valido: false, mensaje: 'La fecha y hora deben ser futuras' };
+    }
+
+    // Validar que no sea sábado ni domingo
+    if (diaSemana === 0 || diaSemana === 6) {
+      return { valido: false, mensaje: 'No se pueden hacer reservas los sábados ni domingos' };
     }
 
     // Validar festivos
@@ -368,7 +374,7 @@ const ReservaPedidos = () => {
                   onChange={handleInputChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 />
-                <p className="text-xs text-gray-500 mt-1">Horario: 7:00 AM - 7:00 PM | No festivos</p>
+                <p className="text-xs text-gray-500 mt-1">Horario: 7:00 AM - 7:00 PM | Lunes a Viernes | No festivos</p>
               </div>
 
               <button
