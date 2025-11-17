@@ -85,7 +85,7 @@ export default function CustomerSellerForm() {
         {/* Header */}
         <div className="mb-8 flex items-center gap-3">
           <div>
-            <h2 className="bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
+            <h2 className="bg-gradient-to-r from-blue-800 to-blue-800 bg-clip-text text-2xl font-bold text-transparent">
               Información de Facturación
             </h2>
             <p className="text-sm text-gray-600">Complete los datos del cliente y vendedor</p>
@@ -96,7 +96,7 @@ export default function CustomerSellerForm() {
           {/* Sección Cliente */}
           <div className="space-y-6">
             <div className="mb-4 flex items-center gap-3">
-              <div className="rounded-xl bg-gradient-to-br from-pink-400 to-pink-100 p-2 shadow-md">
+              <div className="rounded-xl bg-gradient-to-br from-blue-800 to-indigo-300 p-2 shadow-md">
                 <User className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -112,7 +112,7 @@ export default function CustomerSellerForm() {
                 icon={User}
                 placeholder="Nombre completo del cliente"
                 value={customer.name ?? ""} // <- siempre string
-                onChange={(value) => dispatch({ type: "SET_CUSTOMER", payload: { name: value } })} // <- SET_CUSTOMER
+                onChange={(value) => dispatch({ type: "SET_CUSTOMER", payload: { name: value } })}
                 isFocused={isF("customer-name")}
                 onFocus={focus("customer-name")}
                 onBlur={blur}
@@ -163,10 +163,10 @@ export default function CustomerSellerForm() {
             </div>
           </div>
 
-          {/* Sección Vendedor */}
+          {/* Vendedor */}
           <div className="space-y-6">
             <div className="mb-4 flex items-center gap-3">
-              <div className="rounded-xl bg-gradient-to-br from-pink-800 to-purple-300 p-2 shadow-md">
+              <div className="rounded-xl bg-gradient-to-br from-blue-800 to-indigo-300 p-2 shadow-md">
                 <UserCheck className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function CustomerSellerForm() {
             <div
               className={`
                 absolute left-4 top-4 z-10 transition-all duration-200
-                ${isF("notes") ? "text-purple-500 scale-110" : "text-gray-400 group-hover:text-gray-600"}
+                ${isF("notes") ? "text-blue-500 scale-110" : "text-gray-400 group-hover:text-gray-600"}
               `}
             >
               <BadgeCheck size={18} />
@@ -237,7 +237,7 @@ export default function CustomerSellerForm() {
                 transition-all duration-300 ease-out placeholder:text-gray-400 placeholder:font-normal
                 focus:outline-none focus:ring-0
                 ${isF("notes")
-                  ? "border-purple-400 bg-purple-50/50 shadow-lg shadow-purple-100/50"
+                  ? "border-sky-400 bg-gray-50/50 shadow-lg shadow-blue-100/50"
                   : "border-gray-200 hover:border-gray-300 hover:shadow-md"}
                 ${notes ? "bg-green-50/30 border-green-200" : ""}
               `}

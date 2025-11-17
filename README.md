@@ -2,7 +2,7 @@
 
 > **Sistema integral de administración para tiendas y negocios**
 
-Un dashboard moderno y completo desarrollado con Next.js para la gestión eficiente de tu negocio. Controla inventario, ventas, clientes y genera reportes desde una sola plataforma.
+Un dashboard moderno y completo desarrollado con Next.js para la gestión eficiente de tu negocio. Controla inventario, clientes y genera reportes desde una sola plataforma.
 
 ---
 
@@ -15,7 +15,6 @@ Un dashboard moderno y completo desarrollado con Next.js para la gestión eficie
 
 ###  **Módulos de Gestión**
 - **Facturas** - Generación profesional de facturas con cálculos automáticos
-- **Ventas** - Sistema de punto de venta rápido y eficiente
 - **Clientes** - Base de datos completa con historial de compras
 - **Inventario** - Control de stock con alertas automáticas
 - **Reportes** - Analytics avanzados con gráficas interactivas
@@ -84,7 +83,6 @@ tienda-admin/
 │   ├── 📂 facturas/          # Sistema de facturación
 │   ├── 📂 inventario/        # Control de inventario
 │   ├── 📂 reportes/          # Dashboard de reportes
-│   ├── 📂 ventas/            # Punto de venta
 │   ├── 📄 layout.tsx         # Layout principal
 │   └── 📄 page.tsx           # Página de inicio
 ├── 📂 components/
@@ -127,7 +125,6 @@ tienda-admin/
 |  **Dashboard** | ✅ Completo | Interface principal terminada |
 |  **Navegación** | ✅ Completo | Navbar responsive con animaciones |
 |  **Facturas** | 🔄 En desarrollo | Sistema de facturación |
-|  **Ventas** | 🔄 En desarrollo | Punto de venta |
 | 👥**Clientes** | 📋 Planificado | Gestión de clientes |
 |  **Inventario** | 📋 Planificado | Control de stock |
 |  **Reportes** | 📋 Planificado | Analytics y métricas |

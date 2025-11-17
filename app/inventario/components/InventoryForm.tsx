@@ -133,7 +133,7 @@ const InputWithIcon = memo(function InputWithIcon({
       </div>
 
       {description && <p className="ml-1 text-xs text-gray-500">{description}</p>}
-      {hasError && <p className="ml-1 text-xs font-medium text-red-600">{error}</p>}
+      {hasError && <p className="ml-1 text-xs font-medium text-gray-600">{error}</p>}
     </div>
   );
 });
@@ -195,7 +195,7 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div>
-              <h2 className="bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-3xl font-bold text-transparent">
+              <h2 className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-3xl font-bold text-transparent">
                 Nuevo Producto
               </h2>
               <p className="text-gray-600">Agrega productos a tu inventario</p>
@@ -244,7 +244,7 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
           {/* Precio y stock */}
           <div className="space-y-6">
             <div className="mb-4 flex items-center gap-3">
-              <div className="rounded-xl bg-gradient-to-br from-red-950 to-pink-500 p-2 shadow-md">
+              <div className="rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 p-2 shadow-md">
                 <TrendingUp className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -351,7 +351,7 @@ export default function InventoryForm({ onCrear }: InventoryFormProps) {
                 ${
                   loading || Object.keys(errors).length > 0
                     ? "cursor-not-allowed bg-gray-400"
-                    : "bg-gradient-to-r from-red-300 to-red-600 shadow-lg hover:from-pink-600 hover:to-pink-800 hover:shadow-xl"
+                    : "bg-gradient-to-r from-indigo-300 to-blue-600 shadow-lg hover:from-indigo-600 hover:to-blue-800 hover:shadow-xl"
                 }
               `}
             >

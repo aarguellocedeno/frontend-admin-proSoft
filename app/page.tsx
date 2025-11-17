@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import {
   FileText,
-  ShoppingCart,
   Users,
   Package,
   BarChart3,
@@ -34,15 +33,6 @@ export default function Home() {
       icon: FileText,
       color: "text-blue-600",
       gradient: "from-sky-500/10 to-cyan-500/10"
-    },
-    {
-      title: "Registro de Ventas",
-      description:
-        "Sistema de caja rápido con múltiples métodos de pago y tickets automáticos.",
-      href: "/ventas",
-      icon: ShoppingCart,
-      color: "text-blue-600",
-      gradient:  "from-sky-500/10 to-cyan-500/10"
     },
     {
       title: "Gestión de Clientes",
@@ -120,7 +110,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Centro de control integral para tu negocio. Gestiona ventas, inventario y clientes desde un solo lugar.
+            Centro de control integral para tu negocio. Gestiona inventario y clientes desde un solo lugar.
           </motion.p>
           
           <motion.div

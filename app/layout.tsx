@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "RubyBot — Admin Panel",
     template: "RubyBot — %s",
   },
-  description: "Panel de administrador para la tienda ProSoft",
+  description: "Panel de administrador para la tienda RubyBot",
   applicationName: "RubyBot Admin",
   icons: {
     icon: "/logo-main.png",
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Footer sencillo */}
         <footer className="mt-auto border-t bg-white/70 backdrop-blur">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 text-xs text-slate-500 sm:px-6">
-            <span>© {year} ProSoft. Todos los derechos reservados.</span>
+            <span>© {year} RubyBot</span>
             <span>
               Panel •{" "}
               <span className="font-medium" style={{ color: "var(--brand-1)" }}>

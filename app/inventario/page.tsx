@@ -100,7 +100,7 @@ export default function InventarioPage() {
       {/* Tabla de productos */}
       <section>
         {msg.text ? (
-          <p className={`mb-3 text-sm ${msg.ok ? "text-emerald-600" : "text-red-600"}`}>{msg.text}</p>
+          <p className={`mb-3 text-sm ${msg.ok ? "text-blue-600" : "text-gray-600"}`}>{msg.text}</p>
         ) : null}
 
         <InventoryTable productos={filtrados} loading={loading} money={money} />

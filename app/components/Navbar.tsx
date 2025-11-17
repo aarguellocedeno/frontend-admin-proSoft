@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Home,
   FileText,
-  ShoppingCart,
   Users,
   Package,
   BarChart3,
@@ -27,7 +26,6 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
   { label: "Inicio", href: "/", Icon: Home },
   { label: "Facturas", href: "/facturas", Icon: FileText },
-  { label: "Ventas", href: "/ventas", Icon: ShoppingCart },
   { label: "Clientes", href: "/clientes", Icon: Users },
   { label: "Inventario", href: "/inventario", Icon: Package },
   { label: "Reportes", href: "/reportes", Icon: BarChart3 },
