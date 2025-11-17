@@ -1,7 +1,3 @@
-// lib/api.tsx
-// Cliente de APIs para auth, inventario, facturación, impresión y notificaciones.
-// Adaptado desde public/js/api.js
-
 const API_BASES = {
   auth: "http://localhost:8000/auth",
   inventory: "http://localhost:8001/inventory",
@@ -92,7 +88,6 @@ async function request<T>(
   return response.json() as Promise<T>;
 }
 
-// ===== AUTH =====
 export function login(username: string, password: string) {
   return request<{ token: string; user?: User }>(API_BASES.auth, "/login", {
     method: "POST",
