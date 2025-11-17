@@ -58,14 +58,14 @@ const InputField = memo(function InputField({
   return (
     <div className="space-y-2">
       <label className="block text-sm font-semibold text-gray-700">
-        {label} {requiredMark && <span className="text-red-500">*</span>}
+        {label} {requiredMark && <span className="text-blue-500">*</span>}
       </label>
       <div className="relative group">
         <div
           className={`
             absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 z-10
             ${isFocused ? "text-indigo-500 scale-110" : "text-gray-400 group-hover:text-gray-600"}
-            ${status && !status.valid ? "text-red-500" : ""}
+            ${status && !status.valid ? "text-blue-500" : ""}
           `}
         >
           <Icon size={18} />
@@ -79,10 +79,10 @@ const InputField = memo(function InputField({
             focus:outline-none focus:ring-0
             ${isFocused
               ? status && !status.valid
-                ? "border-red-400 bg-red-50/50 shadow-lg shadow-red-100/50"
+                ? "border-blue-400 bg-red-50/50 shadow-lg shadow-red-100/50"
                 : "border-indigo-400 bg-indigo-50/50 shadow-lg shadow-indigo-100/50 scale-[1.02]"
               : status && !status.valid
-                ? "border-red-300 hover:border-red-400"
+                ? "border-blue-300 hover:border-black-400"
                 : status && status.valid
                   ? "border-green-300 bg-green-50/30 hover:border-green-400"
                   : "border-gray-200 hover:border-gray-300 hover:shadow-md"
@@ -102,7 +102,7 @@ const InputField = memo(function InputField({
       {status && (
         <p
           className={`ml-1 text-xs font-medium ${
-            status.valid ? "text-green-600" : "text-red-600"
+            status.valid ? "text-green-600" : "text-blue-600"
           }`}
         >
           {status.message}
@@ -235,12 +235,12 @@ export default function UserForm({
   return (
     <div className="relative mx-auto max-w-2xl">
       {/* Fondo decorativo */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 opacity-60" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-50 via-blue-50 to-pink-50 opacity-60" />
       <div className="relative rounded-3xl border border-white/50 bg-white/80 p-8 shadow-xl shadow-indigo-100/20 backdrop-blur-sm">
         {/* Header */}
         <div className="mb-8 flex items-center gap-4">
           <div>
-            <h2 className="bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
+            <h2 className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-2xl font-bold text-transparent">
               Crear Usuario
             </h2>
             <p className="text-sm text-gray-600">Completa la información del nuevo usuario</p>
@@ -280,7 +280,7 @@ export default function UserForm({
           {/* Género */}
           <div className="space-y-2">
             <label className="block text-sm font-semibold text-gray-700">
-              Género <span className="text-red-500">*</span>
+              Género <span className="text-blue-500">*</span>
             </label>
             <div className="relative group">
               <div
@@ -342,7 +342,7 @@ export default function UserForm({
           {/* Password con toggle */}
           <div className="space-y-2">
             <label className="block text-sm font-semibold text-gray-700">
-              Contraseña <span className="text-red-500">*</span>
+              Contraseña <span className="text-blue-500">*</span>
             </label>
             <div className="relative group">
               <div
@@ -361,10 +361,10 @@ export default function UserForm({
                   transition-all duration-300 placeholder:text-gray-400 focus:outline-none focus:ring-0
                   ${isF("password")
                     ? passwordStatus && !passwordStatus.valid
-                      ? "border-red-400 bg-red-50/50 shadow-lg shadow-red-100/50"
+                      ? "border-blue-400 bg-red-50/50 shadow-lg shadow-red-100/50"
                       : "border-indigo-400 bg-indigo-50/50 shadow-lg shadow-indigo-100/50 scale-[1.02]"
                     : passwordStatus && !passwordStatus.valid
-                      ? "border-red-300 hover:border-red-400"
+                      ? "border-indigo-300 hover:border-blue-400"
                       : passwordStatus && passwordStatus.valid
                         ? "border-green-300 bg-green-50/30 hover:border-green-400"
                         : "border-gray-200 hover:border-gray-300 hover:shadow-md"}
@@ -402,7 +402,7 @@ export default function UserForm({
           {/* Rol */}
           <div className="space-y-2">
             <label className="block text-sm font-semibold text-gray-700">
-              Rol del usuario <span className="text-red-500">*</span>
+              Rol del usuario <span className="text-blue-500">*</span>
             </label>
             <div className="relative group">
               <div
@@ -436,7 +436,7 @@ export default function UserForm({
 
           {/* Vista previa (opcional) */}
           {fullName && (
-            <div className="rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 to-purple-50 p-4">
+            <div className="rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 toblue-50 p-4">
               <div className="mb-3 flex items-center gap-3">
                 <Sparkles className="h-4 w-4 text-indigo-500" />
                 <h4 className="text-sm font-semibold text-gray-800">Vista previa del usuario</h4>
@@ -471,9 +471,9 @@ export default function UserForm({
               onClick={handleCreate}
               disabled={submitting || !isFormValid}
               className={`
-                flex-1 transform rounded-2xl bg-gradient-to-r from-red-500 to-pink-600 px-6 py-4
+                flex-1 transform rounded-2xl bg-gradient-to-r from-blue-300 to-indigo-600 px-6 py-4
                 font-semibold text-white shadow transition-all duration-300 hover:scale-[1.02]
-                hover:from-pink-600 hover:to-purple-700 hover:shadow-xl
+                hover:from-blue-600 hover:to-indigo-700 hover:shadow-xl
                 disabled:cursor-not-allowed disabled:bg-gray-400
               `}
             >

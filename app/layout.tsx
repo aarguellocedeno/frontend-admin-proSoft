@@ -9,11 +9,11 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "ProSoft — Admin Panel",
-    template: "ProSoft — %s",
+    default: "RubyBot — Admin Panel",
+    template: "RubyBot — %s",
   },
   description: "Panel de administrador para la tienda ProSoft",
-  applicationName: "ProSoft Admin",
+  applicationName: "RubyBot Admin",
   icons: {
     icon: "/logo-main.png",
     shortcut: "/logo-main.png",

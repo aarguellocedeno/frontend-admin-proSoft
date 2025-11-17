@@ -64,9 +64,6 @@ const InputWithIcon = memo(function InputWithIcon({
   );
 });
 
-/* =========================================================
-   Formulario
-   ========================================================= */
 export default function CustomerSellerForm() {
   const {
     state: { customer, seller, notes },
@@ -81,7 +78,7 @@ export default function CustomerSellerForm() {
 
   return (
     <div className="relative">
-      {/* Fondo decorativo */}
+      {/* Fondo ahi*/}
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 opacity-60"></div>
 
       <div className="relative rounded-3xl border border-white/50 bg-white/80 p-8 shadow-xl shadow-blue-100/20 backdrop-blur-sm">

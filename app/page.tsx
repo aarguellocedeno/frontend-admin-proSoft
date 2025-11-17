@@ -9,7 +9,9 @@ import {
   Package,
   BarChart3,
   ArrowRight,
-  TrendingUp
+  TrendingUp,
+  CalendarCheck,
+  History
 } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +33,7 @@ export default function Home() {
       href: "/facturas",
       icon: FileText,
       color: "text-blue-600",
-      gradient: "from-blue-500/10 to-indigo-500/10"
+      gradient: "from-sky-500/10 to-cyan-500/10"
     },
     {
       title: "Registro de Ventas",
@@ -39,8 +41,8 @@ export default function Home() {
         "Sistema de caja rápido con múltiples métodos de pago y tickets automáticos.",
       href: "/ventas",
       icon: ShoppingCart,
-      color: "text-emerald-600",
-      gradient: "from-emerald-500/10 to-teal-500/10"
+      color: "text-blue-600",
+      gradient:  "from-sky-500/10 to-cyan-500/10"
     },
     {
       title: "Gestión de Clientes",
@@ -48,8 +50,8 @@ export default function Home() {
         "Directorio completo con historial de compras, preferencias y análisis detallado.",
       href: "/clientes",
       icon: Users,
-      color: "text-purple-600",
-      gradient: "from-purple-500/10 to-pink-500/10"
+      color: "text-blue-600",
+      gradient:  "from-sky-500/10 to-cyan-500/10"
     },
     {
       title: "Control de Inventario",
@@ -57,8 +59,8 @@ export default function Home() {
         "Monitoreo en tiempo real del stock con alertas automáticas y control de existencias.",
       href: "/inventario",
       icon: Package,
-      color: "text-orange-600",
-      gradient: "from-orange-500/10 to-red-500/10"
+      color: "text-blue-600",
+      gradient: "from-sky-500/10 to-cyan-500/10"
     },
     {
       title: "Análisis y Reportes",
@@ -66,8 +68,26 @@ export default function Home() {
         "Dashboard interactivo con métricas clave, tendencias y pronósticos de venta.",
       href: "/reportes",
       icon: BarChart3,
-      color: "text-cyan-600",
-      gradient: "from-cyan-500/10 to-blue-500/10"
+      color: "text-blue-600",
+      gradient: "from-sky-500/10 to-cyan-500/10"
+    },
+    {
+      title: "Reserva de Pedidos",
+      description:
+        "Sistema de reserva y gestión de entregas con control de ubicaciones y horarios programados.",
+      href: "/reservas",
+      icon: CalendarCheck,
+      color: "text-blue-600",
+      gradient: "from-sky-500/10 to-cyan-500/10"
+    },
+    {
+      title: "Historial de Entregas",
+      description:
+        "Consulta el registro completo de entregas por cliente con estadísticas y detalles de cada envío.",
+      href: "/historial",
+      icon: History,
+      color: "text-blue-600",
+      gradient: "from-sky-500/10 to-cyan-500/10"
     },
   ];
 
@@ -90,7 +110,7 @@ export default function Home() {
             className="flex items-center justify-center gap-3 mb-6"
           >
             <h1 className="text-5xl font-bold bg-gradient-to-r from-slate-900 --brand-1 to-slate-900 bg-clip-text text-transparent">
-              Panel Admin - ProSoft Store
+              Panel Admin - RubyBot
             </h1>
           </motion.div>
           
@@ -107,10 +127,10 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm border border-emerald-200 rounded-full text-sm text-emerald-700 shadow-sm"
+            className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm border border-indigo-200 rounded-full text-sm text-cyan-700 shadow-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="inline-flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse" />
               <span>Configura tus productos e información Corporativa</span>
               <TrendingUp className="h-4 w-4" />
             </div>

@@ -33,14 +33,14 @@ export default function ActionsBar() {
       } else if (!state.invoiceId) {
         generateId();
       }
-      alert("✅ Factura guardada correctamente");
+      alert("Factura guardada correctamente");
       return true;
     } catch (err: any) {
       const msg = (err?.message || "").toLowerCase();
       if (msg.includes("insuficiente") || msg.includes("stock")) {
-        alert("❌ Stock insuficiente. Ajusta las cantidades.");
+        alert("Stock insuficiente. Ajusta las cantidades.");
       } else {
-        alert("❌ No se pudo guardar la factura.\n" + (err?.message || ""));
+        alert("No se pudo guardar la factura.\n" + (err?.message || ""));
       }
       return false;
     }

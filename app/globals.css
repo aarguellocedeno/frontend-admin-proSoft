@@ -5,9 +5,9 @@
    =============================== */
 :root {
   /* Marca */
-  --brand-1: #FAA091; /* principal */
-  --brand-2: #FADFF2; /* complemento */
-  --brand-contrast: #3b0f06; /* texto sobre tonos de marca (oscuro y legible) */
+  --brand-1: #474fc5; /* principal */
+  --brand-2: #3190e99a; /* complemento */
+  --brand-contrast: #0a0b0eda; /* texto sobre tonos de marca (oscuro y legible) */
 
   /* Base */
   --bg: #f3f4f6;       /* gris claro ppal (body) */
@@ -19,14 +19,11 @@
 
   /* UI */
   --ring: var(--brand-1);
-  --link: #d36a59;       /* derivado de brand-1 */
+  --link: #59b0d3;       /* derivado de brand-1 */
   --selection-bg: var(--brand-2);
   --selection-fg: var(--fg);
 }
 
-/* ===============================
-   Estilos base
-   =============================== */
 @layer base {
   html, body, #__next {
     height: 100%;
@@ -34,7 +31,7 @@
 
   body {
     @apply antialiased;
-    /* Fondo gris claro con toques de marca muy sutiles */
+    /* Fondo gris claro */
     background:
       radial-gradient(1000px 500px at 10% -10%, var(--bg-soft), transparent),
       radial-gradient(1200px 600px at 100% 0%, color-mix(in srgb, var(--brand-2) 25%, transparent), transparent),
@@ -64,9 +61,6 @@
   p { color: var(--muted); }
 }
 
-/* ===============================
-   Component classes (opcionales)
-   =============================== */
 @layer components {
   .card {
     @apply rounded-2xl shadow-sm border p-5;
@@ -101,9 +95,6 @@
   }
 }
 
-/* ===============================
-   Utilities extra (opcionales)
-   =============================== */
 @layer utilities {
   .bg-app { background: var(--bg); }
   .bg-brand-1 { background-color: var(--brand-1); }

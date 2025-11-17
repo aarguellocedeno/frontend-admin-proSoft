@@ -12,6 +12,8 @@ import {
   Users,
   Package,
   BarChart3,
+  CalendarCheck,
+  History,
   Menu,
   X,
 } from "lucide-react";
@@ -29,6 +31,8 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Clientes", href: "/clientes", Icon: Users },
   { label: "Inventario", href: "/inventario", Icon: Package },
   { label: "Reportes", href: "/reportes", Icon: BarChart3 },
+  { label: "Reservas", href: "/reservas", Icon: CalendarCheck },
+  { label: "Historial", href: "/historial", Icon: History },
 ];
 
 export default function Navbar() {
